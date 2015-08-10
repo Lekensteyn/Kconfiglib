@@ -71,7 +71,7 @@ class CountingTree(Tree):
     def handle_symbol(self, item):
         super().handle_symbol(item)
         # Choices have only one possible value, handle it at the Choice.
-        if not item.is_choice():
+        if not item.is_choice_symbol():
             self.count += 1
         # bools, tri-states (incl. choices) affect code generation, track those.
         if item.get_value() in 'ym':
