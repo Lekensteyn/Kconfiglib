@@ -204,11 +204,12 @@ def main():
     tree = HtmlTree(None, conf.get_top_level_items())
     tree.handle_items()
     print('''
-<!doctype>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Kernel configuration</title>
+<meta name="generator" content="https://github.com/Lekensteyn/Kconfiglib/blob/hackery/examples/count_children.py">
+<title>Kernel configuration for ''' + os.environ['KERNELVERSION'] + '''</title>
 <style>
 .choice + label {
     background: #ccf;
